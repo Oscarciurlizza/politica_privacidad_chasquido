@@ -44,6 +44,13 @@
             border-radius: 5px;
             border-left: 4px solid #e67e22;
         }
+        .new-section {
+            background-color: #e8f5e8;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #27ae60;
+            margin: 15px 0;
+        }
         ul {
             padding-left: 20px;
         }
@@ -69,7 +76,7 @@
         
         <div class="developer-info">
             <p><strong>Desarrollador:</strong> Benavides Ciurlizza, Oscar Javier<br>
-            <strong>Fecha de última actualización:</strong> 11 de agosto de 2025</p>
+            <strong>Fecha de última actualización:</strong> 13 de agosto de 2025</p>
         </div>
 
         <h2>1. Introducción</h2>
@@ -100,11 +107,33 @@
             <li><strong>Tokens de notificaciones:</strong> Identificadores únicos del dispositivo para el envío de notificaciones push.</li>
         </ul>
 
-        <h3>2.4 Datos que NO Recopilamos</h3>
+        <div class="new-section">
+            <h3>2.4 Firebase y Servicios de Google</h3>
+            <ul>
+                <li><strong>Firebase Cloud Messaging:</strong> Utilizamos Firebase para el envío de notificaciones push sobre refacturaciones, lo cual requiere:
+                    <ul>
+                        <li>Token único del dispositivo para identificar dónde enviar las notificaciones</li>
+                        <li>ID de publicidad de Android (requerido por Firebase)</li>
+                        <li>Información básica del dispositivo para compatibilidad</li>
+                    </ul>
+                </li>
+                <li><strong>Firebase Analytics (básico):</strong> Firebase incluye automáticamente analytics básicos que nos ayudan a:
+                    <ul>
+                        <li>Detectar errores y problemas técnicos</li>
+                        <li>Verificar que las notificaciones se entreguen correctamente</li>
+                        <li>Monitorear el rendimiento básico de la aplicación</li>
+                    </ul>
+                </li>
+                <li><strong>Propósito principal:</strong> El uso de Firebase se centra en garantizar que recibas las notificaciones de refacturaciones de manera confiable y oportuna.</li>
+                <li><strong>Datos mínimos:</strong> Solo recopilamos los datos mínimos necesarios para que el sistema de notificaciones funcione correctamente.</li>
+            </ul>
+        </div>
+
+        <h3>2.5 Datos que NO Recopilamos</h3>
         <ul>
             <li><strong>No accedemos a contactos:</strong> La aplicación no lee ni almacena información de tu agenda de contactos.</li>
             <li><strong>No accedemos a archivos personales:</strong> No leemos documentos, fotos o archivos personales del dispositivo.</li>
-            <li><strong>No recopilamos datos del dispositivo:</strong> No accedemos a información detallada del modelo, sistema operativo o especificaciones técnicas.</li>
+            <li><strong>No recopilamos datos sensibles:</strong> No accedemos a información bancaria, contraseñas de otras aplicaciones o datos médicos.</li>
         </ul>
 
         <h2>3. Cómo Utilizamos la Información</h2>
@@ -117,6 +146,8 @@
             <li><strong>Procesamiento de refacturaciones:</strong> Permitir la edición y creación de nuevos pedidos basados en modificaciones del usuario.</li>
             <li><strong>Notificaciones de refacturaciones:</strong> Enviar alertas cuando se crean nuevas refacturaciones con el usuario y cuando cambian de estado (éxito o error).</li>
             <li><strong>Análisis operativo:</strong> Generar reportes sobre eficiencia de entregas, rechazos y actividad de reparto.</li>
+            <li><strong>Mantenimiento técnico:</strong> Detectar y corregir errores de la aplicación para garantizar su funcionamiento.</li>
+            <li><strong>Optimización de notificaciones:</strong> Asegurar que las notificaciones push se entreguen de manera confiable.</li>
         </ul>
 
         <h2>4. Compartición de Datos</h2>
@@ -130,9 +161,9 @@
 
         <h3>4.2 Servicios de Terceros</h3>
         <ul>
+            <li><strong>Google/Firebase:</strong> Compartimos datos mínimos con Firebase (Google) exclusivamente para el funcionamiento del sistema de notificaciones push y monitoreo básico de errores.</li>
             <li><strong>Servicio de WhatsApp:</strong> Compartimos números de teléfono con la plataforma WhatsApp únicamente para envío de códigos de verificación.</li>
-            <li><strong>Servicios de notificaciones push:</strong> Utilizamos servicios de notificaciones únicamente para alertas relacionadas con refacturaciones.</li>
-            <li><strong>No vendemos datos:</strong> No vendemos, alquilamos ni compartimos tus datos personales con fines comerciales.</li>
+            <li><strong>No vendemos datos:</strong> No vendemos, alquilamos ni compartimos tus datos personales con fines comerciales o publicitarios.</li>
         </ul>
 
         <h3>4.3 Requerimientos Legales</h3>
@@ -148,9 +179,10 @@
             <li><strong>Almacenamiento seguro:</strong> Los datos se almacenan en servidores en la nube con medidas de seguridad estándar de la industria.</li>
             <li><strong>Acceso controlado:</strong> Solo personal autorizado y sistemas autenticados pueden acceder a los datos.</li>
             <li><strong>Monitoreo de seguridad:</strong> Supervisión continua de accesos y actividades sospechosas.</li>
+            <li><strong>Protección de Firebase:</strong> Los datos analíticos están protegidos por las medidas de seguridad de Google Cloud Platform.</li>
         </ul>
 
-        <h2>6. Derechos del Usuario</h2>
+        <h2>6. Control de Privacidad y Derechos del Usuario</h2>
         <p>Como usuario de Chasquido, tienes derecho a:</p>
         <ul>
             <li><strong>Acceso:</strong> Solicitar una copia de todos los datos que tenemos sobre ti.</li>
@@ -159,6 +191,7 @@
             <li><strong>Restricción:</strong> Limitar el procesamiento de tus datos en ciertas circunstancias.</li>
             <li><strong>Portabilidad:</strong> Obtener tus datos en un formato estructurado y legible.</li>
             <li><strong>Control de tracking:</strong> Iniciar y detener el seguimiento de ubicación desde la aplicación.</li>
+            <li><strong>Opt-out de analytics:</strong> Puedes desactivar el seguimiento de analytics en la configuración de tu dispositivo Android (Configuración > Google > Anuncios > Restablecer ID de publicidad).</li>
         </ul>
         <p>Para ejercer estos derechos, contacta con nosotros en: oscartrabajoremoto@gmail.com</p>
 
@@ -167,6 +200,7 @@
             <li><strong>Datos de ubicación:</strong> Se conservan durante el período necesario para análisis operativo y cumplimiento de obligaciones logísticas.</li>
             <li><strong>Datos de autenticación:</strong> Se mantienen mientras la cuenta esté activa y por un período adicional por motivos de seguridad.</li>
             <li><strong>Historial de pedidos:</strong> Se conserva para fines de auditoría, análisis operativo y resolución de disputas.</li>
+            <li><strong>Datos de analytics:</strong> Los datos de Firebase Analytics se conservan según las políticas de retención de Google (por defecto 26 meses).</li>
             <li><strong>Eliminación automática:</strong> Los datos se eliminan cuando ya no sean necesarios para los fines operativos o legales.</li>
         </ul>
 
@@ -178,6 +212,7 @@
             <li><strong>Notificaciones:</strong> Para recibir alertas específicas sobre refacturaciones (creación y cambios de estado).</li>
             <li><strong>WhatsApp:</strong> Para recibir códigos de verificación durante el proceso de autenticación.</li>
             <li><strong>Almacenamiento:</strong> Para guardar configuraciones de usuario y datos temporales de la aplicación.</li>
+            <li><strong>ID de Publicidad (Android 13+):</strong> Para analytics y mejora de la aplicación (opcional en Android 13+).</li>
         </ul>
         <p>Puedes gestionar estos permisos en la configuración de tu dispositivo. Ten en cuenta que revocar ciertos permisos puede afectar la funcionalidad de la aplicación.</p>
 
@@ -206,7 +241,7 @@
         </div>
 
         <div class="footer">
-            <p>Esta política de privacidad fue actualizada por última vez el 11 de agosto de 2025.</p>
+            <p>Esta política de privacidad fue actualizada por última vez el 13 de agosto de 2025.</p>
         </div>
     </div>
 </body>
